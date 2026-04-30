@@ -4,7 +4,7 @@
 	- What are the inputs & outputs of the review process/RPA? 
 - What parts of the current solution need to stay the same? (i.e. is SharePoint list to TrackWise a necessity or could this be handled in another way, should we keep SharePoint but do RPA/decisioning somewhere else, etc)
 - What are TrackWise's capabilities- what is done in TrackWise? (Edits, reviews, etc.)
-	- lots of menus, lots of drop downs, free text fields
+	- Lots of menus, lots of drop downs, free text fields
 	- Don't have to physically copy and paste- use RPA to populate
 	- Taking info about record and making decision- RPA is responsible for entry of info into Trackwise and sending confirmation emails 
 - What is the ideal output of the intake process? What pieces of information/columns? What does it look like for you guys to have everything you need?
@@ -14,6 +14,7 @@
 	- Master file - specific set of devices 
 	- Skipping q's we don't need - making sure there is consistency across answers, there is sufficient detail to make follow up decisions
 		- Sometimes there are tons of devices submitted at a time - could we have a system that chunks this into products.
+	- Systems change- need this to be able to adapt
 - What is the input to the failure mode classification AI? What is the output? (From the previous call, it sounded like the output isn't just the failure mode but is some sort of form filled out)
 - What's the tech stack/architecture of AI failure mode classification today- where does this live?
 - Ideally, what would change in the intake process if we knew the failure mode classification during intake? (What are the follow-up questions, are these defined already, etc.)
