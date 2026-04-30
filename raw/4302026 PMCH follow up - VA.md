@@ -12,6 +12,8 @@
 	- i.e. no patient harm, just a crack - not a ton of info
 	- on the other end of the spectrum- patient harm - need tons of info
 	- Master file - specific set of devices 
+	- Skipping q's we don't need - making sure there is consistency across answers, there is sufficient detail to make follow up decisions
+		- Sometimes there are tons of devices submitted at a time - could we have a system that chunks this into products.
 - What is the input to the failure mode classification AI? What is the output? (From the previous call, it sounded like the output isn't just the failure mode but is some sort of form filled out)
 - What's the tech stack/architecture of AI failure mode classification today- where does this live?
 - Ideally, what would change in the intake process if we knew the failure mode classification during intake? (What are the follow-up questions, are these defined already, etc.)
