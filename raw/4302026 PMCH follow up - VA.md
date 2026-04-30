@@ -29,3 +29,15 @@ For next follow up/if we have time (assuming no, but we can do this stuff once w
 - How do we know what is required as a follow-on? Schedule workshops with SMEs to uncover this or is it well documented?
 - Can we get access to the data requirements for TrackWise? (All the fields and requirements for the fields)
 - Can we get examples of a completed form and final PI in TrackWise?
+
+
+Next follow up
+
+- What is the input to the failure mode classification AI? What is the output? (From the previous call, it sounded like the output isn't just the failure mode but is some sort of form filled out)
+- What's the tech stack/architecture of AI failure mode classification today- where does this live?
+- Ideally, what would change in the intake process if we knew the failure mode classification during intake? (What are the follow-up questions, are these defined already, etc.)
+- Can we get access to the full MSFT form?
+- Is there additional branching logic/follow-up questions documented anywhere?
+- How do we know what is required as a follow-on? Schedule workshops with SMEs to uncover this or is it well documented?
+- Can we get access to the data requirements for TrackWise? (All the fields and requirements for the fields)
+- Can we get examples of a completed form and final PI in TrackWise?
