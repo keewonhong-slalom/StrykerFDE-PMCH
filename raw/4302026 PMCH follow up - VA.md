@@ -1,13 +1,14 @@
 
-Send bolded q's to client
 
-- **What's the purpose of the RPA- what tasks is it handling in the process today?** 
-- **What parts of the current solution need to stay the same? (i.e. is SharePoint list to TrackWise a necessity or could this be handled in another way, should we keep SharePoint but do RPA/decisioning somewhere else, etc)**
-- **What are TrackWise's capabilities- what is done in TrackWise? (Edits, reviews, etc.)**
-- **What is the ideal output of the intake process? What pieces of information/columns? What does it look like for you guys to have everything you need?**
-- **What is the input to the failure mode classification AI? What is the output? (From the previous call, it sounded like the output isn't just the failure mode but is some sort of form filled out)**
-- **What's the tech stack/architecture of AI failure mode classification today- where does this live?**
-- **Ideally, what would change in the intake process if we knew the failure mode classification during intake? (What are the follow-up questions, are these defined already, etc.)**
+- What's the purpose of the RPA- what tasks is it handling in the process today? 
+	- What are the inputs & outputs of the review process/RPA? 
+- What parts of the current solution need to stay the same? (i.e. is SharePoint list to TrackWise a necessity or could this be handled in another way, should we keep SharePoint but do RPA/decisioning somewhere else, etc)
+- What are TrackWise's capabilities- what is done in TrackWise? (Edits, reviews, etc.)
+- What is the ideal output of the intake process? What pieces of information/columns? What does it look like for you guys to have everything you need?
+- What is the input to the failure mode classification AI? What is the output? (From the previous call, it sounded like the output isn't just the failure mode but is some sort of form filled out)
+- What's the tech stack/architecture of AI failure mode classification today- where does this live?
+- Ideally, what would change in the intake process if we knew the failure mode classification during intake? (What are the follow-up questions, are these defined already, etc.)
+
 
 - Thoughts on having a complaint application for intake and review vs. disjointed intake in a form and RPA for review/decisioning?
 
