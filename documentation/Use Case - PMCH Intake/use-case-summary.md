@@ -1,7 +1,8 @@
 ---
 use_case: AI-Enabled Complaint Intake
-source: 4/28/2026 Ortho JR PCMH Deep Dive (raw/4282026 Ortho JR PCMH Deep Dive.pdf, reference/PMCH_Phase_2.pptx)
+source: 4/28/2026 Ortho JR PCMH Deep Dive (raw/4282026 Ortho JR PCMH Deep Dive.pdf, reference/PMCH_Phase_2.pptx); TrackWise PI Required Fields Appendix; Event Summary Report PR 4316035 (5/1/2026); Intake Form (4/30/2026)
 date_generated: 2026-04-28
+date_updated: 2026-05-01
 ---
 
 ---
@@ -63,5 +64,76 @@ An AI layer embedded at the point of complaint submission validates field rep MS
 - What the "master file" is and how it's maintained
 - Where exactly the human review step fits in a redesigned flow
 - What a prototype application would look like and own
+
+---
+
+## TrackWise PI Required Fields (Source of Truth for Intake Completeness)
+
+The following field groups are **mandatory to open a Product Inquiry (PI)** in TrackWise. These define the minimum intake completeness target the AI layer must validate against.
+
+**PI Record Header (System-Enforced)**
+- Record Type, Division, CIC, Originator, Business Unit, Owner
+- Awareness Date / Event Date, Date Received / Date Opened
+- Source of Inquiry / Intake Source
+
+**Product Identification (at least one required)**
+- Product Name, Product Code / Catalog Number, Product Lot/Serial #, Product Family
+- *As Reported* (free text — used when device/catalog is unknown)
+
+**Inquiry Description & Event Metadata**
+- Event Description, Event Date, Country of Event, Reporter Type, How Was Issue Noticed
+- Procedure Completed Successfully, Patient Involvement, Medical Intervention
+- Surgical Delay, Surgical Delay Length
+- Adverse Consequences, Adverse Consequences Details
+- Injury, Death, Serious Public Health Threat, Counterfeit Product
+
+**Contact Information**
+- Initial Reporter Name (First/Last), Address, City, State/Prov (2-digit if US), Postal Code, Country
+- Email, Phone, Reporter Type, Health Professional Occupation, Sales Rep
+
+> **Key intake principle:** A PI is an information-gathering and assessment record. Regulatory conclusions, severity, and investigation outcomes are **not** required at intake — scope AI validation accordingly.
+
+**Downstream required fields (triggered post-intake — not in scope for intake AI)**
+
+| Stage | Trigger | Newly Required |
+|-------|---------|----------------|
+| Regulatory Review | Regulatory Tab active | Decision, Rationale, Product Grid fields |
+| Complaint Creation | Complaint Required = Yes | Complaint intake fields |
+| Investigation | Investigation Required | Root cause, evaluation |
+| Regulatory Reporting | Reportable = Yes | MDR / MIR details |
+| Closure | Status = Closed | All closure controls |
+
+---
+
+## Concrete Example: PR 4316035 (Event Summary Report, 5/1/2026)
+
+This record illustrates a **low-risk, non-reportable PI** flowing through the current manual intake process. It is a useful prototype benchmark for AI intake validation.
+
+**Event**
+- **Product:** Handpiece MICS — ROB3173 TKA 2.1 (Mako 4 Robot ONLY), Catalog 209063, Lot 42030823/4220806
+- **Issue:** Handle will not stay in the locked position
+- **Case type:** TKA (Mako 4 Robot); device to be decontaminated prior to return
+- **How noticed:** Pre-Op
+- **Procedure completed successfully:** Yes
+- **Patient involvement:** No — No Impact
+- **Medical intervention / Surgical delay / Adverse consequences:** No
+
+**Intake & routing**
+- Opened: 08 Apr 26 via Email; CIC: Joint Replacement; CMC: Joint Replacement-Robotics
+- Reporter: Brook Bowman (Company Rep), Grace Surgical Hospital, Lubbock TX
+- Physician: David Shephard; Anatomy: Knee
+
+**Regulatory outcome**
+- MDR: Not reportable — highest potential severity S2, occurrence O3; no serious injury/death in 4-year complaint history for this device family
+- MIR: N/A — Event outside EU
+- Final state: No Report Required Approval
+
+**Communication log (illustrates manual follow-up burden)**
+- Contact 1: 08 Apr 26 (Email) — Confirmation + first request for additional info
+- Contact 2: 15 Apr 26 (Email) — Second request for additional info
+- Contact 3: 21 Apr 26 (Email) — Third request for additional info
+- Status: Information Obtained / Attempts Completed
+
+> **AI opportunity:** This record required 3 follow-up contacts over 13 days to obtain information that could have been captured at intake. An AI-assisted intake layer validating completeness at submission would eliminate this cycle for cases like PR 4316035. Estimated impact: reduce follow-up rate on low-risk PIs and accelerate time-to-regulatory-decision from ~13+ days toward same-day.
 
 ---
