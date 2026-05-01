@@ -41,6 +41,7 @@ Asked async:
 
 Next follow up topics-
 
+- Talk through the current MS Form intake fields & TrackWise PI schema
 - What is the input to the failure mode classification AI? What is the output? (From the previous call, it sounded like the output isn't just the failure mode but is some sort of form filled out)
 - What's the tech stack/architecture of AI failure mode classification today- where does this live?
 - Ideally, what would change in the intake process if we knew the failure mode classification during intake? (What are the follow-up questions, are these defined already, etc.)
