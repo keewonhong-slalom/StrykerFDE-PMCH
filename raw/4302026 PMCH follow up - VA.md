@@ -21,7 +21,8 @@
 
 
 - Thoughts on having a complaint application for intake and review vs. disjointed intake in a form and RPA for review/decisioning?
-
+- 
+- How do we know what is required as a follow-on? Schedule workshops with SMEs to uncover this or is it well documented?
 
 For next follow up/if we have time (assuming no, but we can do this stuff once we have confirmation to work on this prototype):
 - Can we get access to the full MSFT form?
@@ -31,13 +32,15 @@ For next follow up/if we have time (assuming no, but we can do this stuff once w
 - Can we get examples of a completed form and final PI in TrackWise?
 
 
-Next follow up
+Asked async: 
+
+- Can we get access to the full MSFT form?
+- Is there additional branching logic/follow-up questions documented anywhere?
+- Can we get access to the data requirements for TrackWise? (All the fields and requirements for the fields)
+- Can we get examples of a completed form and final PI in TrackWise?
+
+Next follow up topics-
 
 - What is the input to the failure mode classification AI? What is the output? (From the previous call, it sounded like the output isn't just the failure mode but is some sort of form filled out)
 - What's the tech stack/architecture of AI failure mode classification today- where does this live?
 - Ideally, what would change in the intake process if we knew the failure mode classification during intake? (What are the follow-up questions, are these defined already, etc.)
-- Can we get access to the full MSFT form?
-- Is there additional branching logic/follow-up questions documented anywhere?
-- How do we know what is required as a follow-on? Schedule workshops with SMEs to uncover this or is it well documented?
-- Can we get access to the data requirements for TrackWise? (All the fields and requirements for the fields)
-- Can we get examples of a completed form and final PI in TrackWise?
